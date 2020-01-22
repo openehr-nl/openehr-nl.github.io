@@ -5,12 +5,10 @@ color_scheme: ""
 search_enabled: true
 search_tokenizer_separator: /[\s/]+/
 logo: "/assets/images/openEHR_nl_logo.png"
+collections:
+  zib_templates:
+    output: true
 aux_links:
   "een project van openEHR Nederland":
     - "//openehr.nl/"
 heading_anchors: true
-collections:
-  zib_templates:
-    output: true
-
-collections_dir: collections

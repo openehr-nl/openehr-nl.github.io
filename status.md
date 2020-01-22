@@ -13,3 +13,9 @@ Een template kan een van de volgende statussen hebben:
  - Doing
  - Draft
  - Final
+
+#collections
+
+ {% for collection in site.collections %}
+  {{ collection }}
+{% endfor %}

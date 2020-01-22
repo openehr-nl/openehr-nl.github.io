@@ -11,19 +11,18 @@ type: Observation
 zib_naam: Bloeddruk-v3.1(2019NL)
 zib_url: https://zibs.nl/wiki/Bloeddruk-v3.1(2019NL)
 ckm:
- -
  	arcehtype_id: openEHR-EHR-OBSERVATION.blood_pressure.v2 
  	url:https://www.openehr.org/ckm/archetypes/1013.1.3574
 ---
 
 # {{page.title}}
 
-naam:
+naam: {{page.name}}
 
 
 ## Referenties
 
-ckm: [{{page.ckm_arcehtype_id}}]({{page.ckm.url}})
+ckm: [{{page.ckm.arcehtype_id}}]({{page.ckm.url}})
 
 
 
