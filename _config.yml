@@ -10,10 +10,7 @@ aux_links:
     - "//openehr.nl/"
 heading_anchors: true
 collection:
--  
   zib_templates:
     output: true
--
-  usecase_templates:
-    output: true
+
 collections_dir: collections
