@@ -9,7 +9,7 @@ aux_links:
   "een project van openEHR Nederland":
     - "//openehr.nl/"
 heading_anchors: true
-collection:
+collections:
   zib_templates:
     output: true
 
