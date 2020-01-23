@@ -16,6 +16,6 @@ Een template kan een van de volgende statussen hebben:
 
 #collections
 
- {% for collection in site.collections %}
-  {{ collection }}
+ {% for zib_templates in site.collections %}
+  {{ zib_templates }}
 {% endfor %}
