@@ -1,7 +1,7 @@
 ---
 title: Bloeddruk
 has_children: false
-nav_order: 1
+nav_order: 4
 name: zib_bloeddruk_v0
 status: Doing
 content_status: Doing
