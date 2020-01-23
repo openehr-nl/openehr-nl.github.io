@@ -1,8 +1,8 @@
 title: "Remote theme example"
 remote_theme: pmarsceill/just-the-docs
 theme: "just-the-docs"
-color_scheme: ""
-search_enabled: true
+color_scheme: null
+search_enabled: false
 search_tokenizer_separator: /[\s/]+/
 logo: "/assets/images/openEHR_nl_logo.png"
 collections:
