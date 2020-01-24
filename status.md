@@ -2,6 +2,7 @@
 title: Status
 has_children: false
 nav_order: 3
+layout: default
 ---
 
 # Status
@@ -16,6 +17,6 @@ Een template kan een van de volgende statussen hebben:
 
 #collections
 
- {% for zib_templates in site.collections %}
-  {{ zib_templates }}
+ {% for zib_template in site.zibtemplates %}
+  {{ zib_templates.content | markdownify }}
 {% endfor %}

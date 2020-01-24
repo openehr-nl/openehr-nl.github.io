@@ -1,5 +1,6 @@
 ---
-title: Test
+title: Overzicht
+layout: default
 has_children: true
 nav_order: 2
 ---
@@ -9,4 +10,3 @@ nav_order: 2
 Test this
 
 
-blah
