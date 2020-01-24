@@ -20,5 +20,5 @@ Change
 # Collections
 
 {% for zib_template in site.zib_templates %}
-  {{ zib_templates.content | markdownify }}
+  {{ zib_template.content | markdownify }}
 {% endfor %}
