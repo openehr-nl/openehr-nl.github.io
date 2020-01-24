@@ -15,8 +15,10 @@ Een template kan een van de volgende statussen hebben:
  - Draft
  - Final
 
-#collections
+Change
 
- {% for zib_template in site.zibtemplates %}
+# Collections
+
+{% for zib_template in site.zib_templates %}
   {{ zib_templates.content | markdownify }}
 {% endfor %}

@@ -2,13 +2,14 @@ title: "Remote theme example"
 remote_theme: pmarsceill/just-the-docs
 theme: "just-the-docs"
 color_scheme: null
-search_enabled: false
+search_enabled: true
 search_tokenizer_separator: /[\s/]+/
 logo: "/assets/images/openEHR_nl_logo.png"
 collections:
   zib_templates:
     output: true
+    permalink: /:collection/:name
 aux_links:
   "een project van openEHR Nederland":
     - "//openehr.nl/"
-heading_anchors: true
+heading_anchors: false
