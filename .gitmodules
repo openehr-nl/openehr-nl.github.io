@@ -1,0 +1,3 @@
+[submodule "ZIBs-on-openEHR"]
+	path = ZIBs-on-openEHR
+	url = https://github.com/openehr-nl/ZIBs-on-openEHR
