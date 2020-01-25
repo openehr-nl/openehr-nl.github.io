@@ -9,7 +9,7 @@ collections:
   zib_templates:
     output: true
     permalink: /:collection/:name
-collections_dir: ZIBS-on-openEHR/docs
+collections_dir: ZIBs-on-openEHR/docs
 aux_links:
   "een project van openEHR Nederland":
     - "//openehr.nl/"
