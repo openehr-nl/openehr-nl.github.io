@@ -14,3 +14,4 @@ aux_links:
   "een project van openEHR Nederland":
     - "//openehr.nl/"
 heading_anchors: false
+exclude: ["Gemfile", "Gemfile.lock","ZIBs-on-openEHR"]
