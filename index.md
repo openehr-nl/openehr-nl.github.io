@@ -1,6 +1,6 @@
 ---
 title: Overzicht
-layout: default
+layout: zib
 has_children: true
 nav_order: 2
 ---
