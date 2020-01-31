@@ -2,7 +2,7 @@
 Layout: default
 ---
 
-# Zib template
+# Zib template 
 
 {{ content }}
 
