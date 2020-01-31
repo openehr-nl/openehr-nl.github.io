@@ -1,0 +1,8 @@
+---
+Layout: default
+---
+
+# Zib template
+
+{{ content }}
+
