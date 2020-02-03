@@ -20,6 +20,5 @@ Change
 # Collections
 
 {% for zib_template in site.zib_templates %}
-  {{ zib_template.content | markdownify }} <br>
-  <a href="{{ zib_template.url }}">{{ zib_template.url }}</a>
+  {{ zib_template.content | markdownify }}
 {% endfor %}
