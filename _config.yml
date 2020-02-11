@@ -10,9 +10,10 @@ collections:
     output: true
     permalink: /:collection/:name
 collections_dir: ZIBs-on-openEHR/docs
+data_dir: ZIBs-on-openEHR/docs/_data
 aux_links:
   "een project van openEHR Nederland":
     - "//openehr.nl/"
 heading_anchors: false
 exclude: ["Gemfile", "Gemfile.lock","ZIBs-on-openEHR"]
-verbose: true
+verbose: false
