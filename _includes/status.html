@@ -1,0 +1,6 @@
+{% case include.status %}
+    {% when "Todo" %}<span class="label label-purple">Todo</span>
+    {% when "Doing" %}<span class="label label-yellow">Actief</span>
+    {% when "Draft" %}<span class="label label-blue">Concept</span>
+    {% when "Final" %}<span class="label label-green">Definitief</span>
+{% endcase %}

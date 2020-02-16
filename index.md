@@ -1,12 +1,15 @@
 ---
-title: Overzicht
-layout: zib
-has_children: true
-nav_order: 2
+title: Home
+layout: default
+nav_order: 1
 ---
 
-# Another page
+## Inleiding
 
-Test this
+tekst
+
+## Doelstelling
+
+tekst
 
 
