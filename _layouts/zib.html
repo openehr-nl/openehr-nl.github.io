@@ -1,8 +1,68 @@
 ---
 layout: default
+mapping_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/docs/_data/mappings
+template_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/local
+template_suffix: t.json
+archetype_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/local
+archetype_suffix: adl
 ---
 
-<H2> Zib template </H2>
+<h1>{{ page.title }}</h1>
+
+<dl>
+    <dt>Versie</dt>
+        <dd>{{ page.version }}</dd>
+    <dt>Status</dt>
+        <dd>{% for status in page.status %}{% assign topic=status[0] %}{% assign status_text=status[1] %}
+            <span>{{ topic }}:{% include status.html status=status_text %} &nbsp; </span>
+        {% endfor %}</dd>
+    <dt>Labels</dt>
+        <dd>{% if page.tags %}{{ page.tags | sort | array_to_sentence_string }}{% endif %}</dd>
+    <dt>Informatiestandaard</dt>
+        <dd>{% if page.categories %}{{ page.categories | sort | array_to_sentence_string }}{% endif %}</dd>
+    <dt>Auteur(s)</dt>
+        <dd>{% if page.authors %}{{ page.authors | sort | array_to_sentence_string }}{% endif %}</dd>
+    <dt>Laatste wijziging</dt>
+        <dd>{{ page.date | default: "now" | date: "%d-%m-%Y" }}</dd>
+</dl>
+
+
+<h2>Mapping</h2>
+
+<dl>
+    <dt>ZIB</dt>
+        <dd><a href="{{ page.zib.url }}">{{ page.zib.name }}</a></dd>
+    <dt>Template</dt>
+        <dd>{% if page.openEHR.template %}
+            <a href="{{ layout.template_prefix }}/{{ page.openEHR.template }}.{{ layout.template_suffix }}">{{ page.openEHR.template }}</a>
+        {% endif %}</dd>
+    <dt>Archetypes</dt>
+        <dd>{% for archetype in page.openEHR.archetypes %}
+            <a href="{{ layout.archetype_prefix }}/{{ archetype }}.{{ layout.archetype_suffix }}">{{ archetype }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}</dd>
+    <dt>CKM link</dt>
+        <dd>{% if page.openEHR.ckm %}<a href="{{ page.openEHR.ckm }}">{{ page.openEHR.template }}</a>{% endif %}</dd>
+</dl>
+
+{% assign mapping = site.data[page.mapping] %}
+{% if mapping %}
+<table>
+    <thead>
+    {% for column in mapping[0] %}
+    <th>{{ column[0] }}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in mapping %}
+    <tr>
+        {% for cell in row %}
+        <td>{{ cell[1] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+Deze mapping is beschikbaar als <a href="{{ layout.mapping_prefix }}/{{ page.mapping }}.csv">{{ page.mapping }}.csv</a> bestand.
+{% endif %}
 
 {{ content }}
-
