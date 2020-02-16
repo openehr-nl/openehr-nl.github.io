@@ -19,11 +19,11 @@ archetype_suffix: adl
     <dt>Labels</dt>
         <dd>{% if page.tags %}{{ page.tags | sort | array_to_sentence_string }}{% endif %}</dd>
     <dt>Informatiestandaard</dt>
-        <dd>{% if page.categories %}{{ page.categories | sort | array_to_sentence_string }}{% endif %}</dd>
+        <dd>{% if page.categories %}{{ page.categories | array_to_sentence_string }}{% endif %}</dd>
     <dt>Auteur(s)</dt>
         <dd>{% if page.authors %}{{ page.authors | sort | array_to_sentence_string }}{% endif %}</dd>
     <dt>Laatste wijziging</dt>
-        <dd>{{ page.date | default: "now" | date: "%d-%m-%Y" }}</dd>
+        <dd>{{ page.date | date: "%d-%m-%Y" }}</dd>
 </dl>
 
 
