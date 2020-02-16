@@ -1,0 +1,1 @@
+docker run --rm -v "$(pwd):/srv/jekyll" -p 4000:4000 -it -h openehr-nl.local openehr-nl-jekyll bash
