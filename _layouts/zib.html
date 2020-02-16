@@ -1,6 +1,6 @@
 ---
 layout: default
-mapping_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/docs/_data/mappings
+mapping_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/mappings
 template_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/local
 template_suffix: t.json
 archetype_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/local
@@ -44,7 +44,8 @@ archetype_suffix: adl
         <dd>{% if page.openEHR.ckm %}<a href="{{ page.openEHR.ckm }}">{{ page.openEHR.template }}</a>{% endif %}</dd>
 </dl>
 
-{% assign mapping = site.data[page.mapping] %}
+{% assign concept = page.name | replace: '.md', '' %}
+{% assign mapping = site.data[concept] %}
 {% if mapping %}
 <table>
     <thead>
@@ -62,7 +63,7 @@ archetype_suffix: adl
     {% endfor %}
     </tbody>
 </table>
-Deze mapping is beschikbaar als <a href="{{ layout.mapping_prefix }}/{{ page.mapping }}.csv">{{ page.mapping }}.csv</a> bestand.
+Deze mapping is beschikbaar als <a href="{{ layout.mapping_prefix }}/{{ concept }}.csv">{{ concept }}.csv</a> bestand.
 {% endif %}
 
 {{ content }}
