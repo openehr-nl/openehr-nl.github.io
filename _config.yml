@@ -10,5 +10,5 @@ aux_links:
   "een project van openEHR Nederland":
     - "https://www.openehr.nl"
 heading_anchors: false
-exclude: ["Gemfile", "Gemfile.lock", ".idea", "README.md", "LICENSE"]
+exclude: ["Gemfile", "Gemfile.lock", ".idea"]
 verbose: false
