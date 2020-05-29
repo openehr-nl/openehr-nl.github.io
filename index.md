@@ -10,7 +10,7 @@ Stichting openEHR Nederland heeft als doelstelling openEHR bekend te maken binne
 
 ## ZIB's in ontwikkeling
 
-Zorginformatiebouwstenen worden gebruikt om inhoudelijke (niet technische) afspraken vast te leggen ten behoeve van het standaardiseren van informatie, die gebruikt wordt in het zorgproces. Momenteel wordt gestart met het creëren van de eerste templates binnen de Basisgegevensset Zorg (BgZ).  
+Zorginformatiebouwstenen worden gebruikt om inhoudelijke (niet technische) afspraken vast te leggen ten behoeve van het standaardiseren van informatie, die gebruikt wordt in het zorgproces. Momenteel wordt gestart met het creëren van de eerste templates binnen de Basisgegevensset Zorg (BgZ). We gebruiken de laatste (2019) versie ook als deze versie nog niet officieel gereleased (verwacting is dat dit in de loop van 2020 wel gaat gebeuren).
 
 ## OpenEHR
 
@@ -22,9 +22,11 @@ Geef je op via info@openehr.nl voor de werkgroep je ontvangt dan de nieuwsbrief 
 
 *Agenda:*
 
-Donderdag 10 december, Miles Ahead Driebergen: 1ste meeting werkgroep.
-Dinsdag 3 Maart 15:30 uur, Eurotransplant Leiden: Herhaling 1ste meeting werkgroep ZIB's on openEHR
-April, online: 2de meeting werkgroep (agenda en datum volgt)
++ 26 June 2020 		Online werkgroep meeting (meeting link volgt)
++ 21 August 2020 		Online werkgroep meeting (meeting link volgt)
++ 18 September 2020 	Online werkgroep meeting (meeting link volgt)
++ 16 Oktober 2020		werkgroep meeting (waarschijnlijk op locatie)
++ 13 November 2020	Online werkgroep meeting (meeting link volgt)
 
 ## Informatie
 
