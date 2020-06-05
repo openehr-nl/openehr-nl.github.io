@@ -15,7 +15,7 @@ nav_order: 5
 
 [https://openehr-nl.github.io/](https://openehr-nl.github.io/) - Mapping website repository
 
- ### ZIBs
+### ZIBs
 
 [https://zibs.nl/wiki/ZIB_Publicatie_2019(NL)](https://zibs.nl/wiki/ZIB_Publicatie_2019(NL))
 
@@ -26,7 +26,7 @@ nav_order: 5
 
 [https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2019.01_FHIR_BGZ_2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2019.01_FHIR_BGZ_2017)
 
- ### ZIBs and BgZ
+### ZIBs and BgZ
 
 [https://informatiestandaarden.nictiz.nl/wiki/Zib:Zib_Gebruik_Informatiestandaarden](https://informatiestandaarden.nictiz.nl/wiki/Zib:Zib_Gebruik_Informatiestandaarden) - Nictiz over ZIBs
 
