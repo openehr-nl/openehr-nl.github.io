@@ -13,9 +13,9 @@ archetype_suffix: adl
     <dt>Versie</dt>
         <dd>{{ page.version }}</dd>
     <dt>Status</dt>
-        <dd>{% for status in page.status %}{% assign topic=status[0] %}{% assign status_text=status[1] %}
-            <span>{{ topic }}:{% include status.html status=status_text %} &nbsp; </span>
-        {% endfor %}</dd>
+        <dd>{% assign status_text = page.status.template %}
+            <span>{% include status.html status=status_text %} &nbsp; </span>
+        </dd>
     <dt>Labels</dt>
         <dd>{% if page.tags %}{{ page.tags | sort | array_to_sentence_string }}{% endif %}</dd>
     <dt>Informatiestandaard</dt>
@@ -26,6 +26,11 @@ archetype_suffix: adl
         <dd>{{ page.date | date: "%d-%m-%Y" }}</dd>
 </dl>
 
-{% include mapping.html %}
+{% include template.html %}
 
 {{ content }}
+
+
+
+
+

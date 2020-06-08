@@ -1,0 +1,40 @@
+<h2>Template: {{ page.openEHR.template }}{% assign status_text=page.status.global %}<span>{% include status.html status=status_text %}</span> </h2>
+
+<dl>
+    <dt>ZIB</dt>
+        <dd><a href="{{ page.zib.url }}">{{ page.zib.name }}</a></dd>
+    <dt>Template</dt>
+        <dd>{% if page.openEHR.template %}
+            <a href="{{ layout.template_prefix }}/{{ page.openEHR.template }}.{{ layout.template_suffix }}">{{ page.openEHR.template }}</a>
+        {% endif %}</dd>
+    <dt>Archetypes</dt>
+        <dd>{% for archetype in page.openEHR.archetypes %}
+            <a href="{{ layout.archetype_prefix }}/{{ archetype }}.{{ layout.archetype_suffix }}">{{ archetype }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}</dd>
+    <dt>CKM link</dt>
+        <dd>{% if page.openEHR.ckm %}<a href="{{ page.openEHR.ckm }}">{{ page.openEHR.template }}</a>{% endif %}</dd>
+</dl>
+
+{% assign template = page.openEHR.template | remove: "." | remove: "(" |  remove: ")" %}
+{% assign t = site.data[template].tree %}
+{% if t %}
+<table>
+    <thead>
+    <th width="20%">Node</th>
+    <th width="35%">Beschrijving</th>
+    <th width="45%">Invoer</th>
+    </thead>
+    <tbody>
+    {% for child in t.children %}
+       {% include template_table_row.html child=child depth="" %} 
+            {% for subchild in child.children %}
+                {% include template_table_row.html child=subchild depth="." %} 
+                    {% for subsubchild in subchild.children %}    
+                        {% include template_table_row.html child=subsubchild depth=".." %}    
+                    {% endfor %}
+            {% endfor %}
+    {% endfor %}
+    </tbody>
+</table>
+Deze mapping is beschikbaar als <a href="{{ layout.mapping_prefix }}/{{ page.openEHR.template }}.json">{{ page.openEHR.template }}.json</a> bestand.
+{% endif %}
