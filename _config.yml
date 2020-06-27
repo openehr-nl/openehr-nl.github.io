@@ -10,5 +10,14 @@ aux_links:
   "een project van openEHR Nederland":
     - "https://www.openehr.nl"
 heading_anchors: false
-exclude: ["Gemfile", "Gemfile.lock", ".idea", "ZIBs-on-openEHR/README.md"]
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  ".idea",
+  "Dockerfile",
+  "build.bat",
+  "README.md",
+  "ZIBs-on-openEHR/README.md",
+  "ZIBs-on-openEHR/local"
+]
 verbose: false
