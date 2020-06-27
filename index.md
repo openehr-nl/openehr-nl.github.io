@@ -4,7 +4,7 @@ layout: default
 nav_order: 1
 ---
 
-## ZIB's on OpenEHR
+## ZIB's on openEHR
 
 [Stichting openEHR Nederland](https://www.openehr.nl) heeft als doelstelling [openEHR](https://www.openehr.org) bekend te maken binnen de Nederlandse zorg IT en in te spelen op 
 de specifiek nederlandse zorg IT vraagstukken binnen deze internationale standaard. 
