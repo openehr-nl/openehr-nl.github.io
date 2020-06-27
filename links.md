@@ -66,10 +66,9 @@ openEHR forum - Discourse:
 [https://discourse.openehr.org/c/openehr-affiliates/openehr-netherlands/12](https://discourse.openehr.org/c/openehr-affiliates/openehr-netherlands/12)
 
 
+## Tools
 
-# Tools
-
-Archetype Designer (openEHR/BEtter), credentials available upon request via work-group:
+Archetype Designer (openEHR/Better), credentials available upon request via work-group:
 [https://tools.openehr.org/designer](https://tools.openehr.org/designer/#/)
 
 Archetype Editor (openEHR/Ocean):
