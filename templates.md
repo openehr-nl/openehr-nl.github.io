@@ -12,7 +12,7 @@ has_toc: false
 <table>
     <thead align="left">
         <tr>
-            <th>Tenplate Naam</th>
+            <th>Template Naam</th>
             <th>Versie</th>
             <th>Status</th>
             <th>Laatste wijziging</th>
