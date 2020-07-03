@@ -26,9 +26,9 @@ Lees de [werkwijze](/help.html) en ga aan de slag!
 
 *Agenda:*
 
-+ 26 June 2020 		Online werkgroep meeting (meeting link volgt)
++ 3 Juli 2020 			Online werkgroep meeting (meeting link volgt)
 + 21 August 2020 		Online werkgroep meeting (meeting link volgt)
 + 18 September 2020 	Online werkgroep meeting (meeting link volgt)
 + 16 Oktober 2020		werkgroep meeting (waarschijnlijk op locatie)
-+ 13 November 2020	Online werkgroep meeting (meeting link volgt)
++ 13 November 2020		Online werkgroep meeting (meeting link volgt)
 
