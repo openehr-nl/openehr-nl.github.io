@@ -23,7 +23,7 @@ has_toc: false
         <tr>
             <td><a href="{{p.url}}">{{ p.title }}</a></td>
             <td>{{ p.version }}</td>
-            <td>{% include status.html status=p.status.mapping %}</td>
+            <td>{% include status.html status=p.status.globaal %}</td>
             <td>{{ p.date | date: "%d-%m-%Y" }}</td>
         </tr>
         {% endfor %}
