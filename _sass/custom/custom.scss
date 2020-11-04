@@ -127,3 +127,13 @@ $content-width: none;
 //lg: $content-width + $nav-width,
 //xl: 1400px
 //);
+
+.td-inset-0 {
+  padding-left: $spacing-unit * 0.75;
+}
+.td-inset-1 {
+  padding-left: $spacing-unit * 1.75;
+}
+.td-inset-2 {
+  padding-left: $spacing-unit * 2.75;
+}
