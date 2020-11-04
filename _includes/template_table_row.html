@@ -1,9 +1,9 @@
     {% assign  kid = include.child %}
-    <tr>
+    <tr title="AQL path: {{kid.aqlPath}}">
         <td class="td-inset-{{ include.depth }}">
             <b>{%if kid.localizedName %}{{ kid.localizedName }}{% else %} {{ kid.name }}{% endif %}</b><br>
             {{ kid.rmType }}<br>
-            <i>{{ kid.min }}...{{ kid.max }}</i><br>
+            <i>{{ kid.min }}..{{ kid.max }}</i><br>
             {% for term in kid.termBindings %}{% for val in term %}{{ val.value }}{% endfor %}{% if term.last %}{% else %}<br>{% endif %}{% endfor %}
         </td>
         <td>{{ kid.localizedDescriptions.nl }}</td>
