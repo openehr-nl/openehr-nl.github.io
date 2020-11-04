@@ -1,8 +1,6 @@
 <h2>Mapping</h2>
 
 <dl>
-    <dt>ZIB</dt>
-        <dd><a href="{{ page.zib.url }}">{{ page.zib.name }}</a></dd>
     <dt>Templates</dt>
         <dd>{% for template in page.openEHR.templates %}
             <a href="{{ layout.template_prefix }}/{{ template }}.{{ layout.template_suffix }}">{{ template }}</a>{% unless forloop.last %}, {% endunless %}
@@ -16,7 +14,7 @@
 </dl>
 
 {% assign concept = page.name | replace: '.md', '' %}
-{% assign mapping = site.data[concept] %}
+{% assign mapping = site.data.mappings[concept] %}
 {% if mapping %}
 <table>
     <thead>

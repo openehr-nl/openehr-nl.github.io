@@ -1,20 +1,18 @@
     {% assign  kid = include.child %}
-    {% assign  pre = include.depth %}
-    {% if kid.aqlPath contains "/content" %}
-                <tr>
-                    <td><b>{{ pre }}{%if kid.localizedNames %}{{ kid.localizedNames.en }}{% else %} {{ kid.name }}{% endif %}</b><br>
-                            {{ kid.rmType }}<br>
-                            <i>{{ kid.min }}...{{ kid.max }}</i><br>
-                            {% for term in kid.termBindings %}{% for val in term %}{{ val.value }}{% endfor %}{% if term.last %}{% else %}<br>{% endif %}{% endfor %}
-                    </td>
-                    <td>{{ kid.localizedDescriptions.en }}</td> 
-                    <td>{%for input in kid.inputs %}
-                            {% case input.suffix %}
-                            {% when 'unit' %}<strong>input range</strong><br>{% for listing in input.list %}{{ listing.validation.range.min }} {{ listing.validation.range.maxOp}} {{ listing.validation.range.max }} {{ listing.localizedLabels.en }}<br>{% endfor %} 
-                            {% when 'code' %}<strong>code :: label(description)</strong><br>{% for listing in input.list %}{{ listing.value }} :: {{ listing.localizedLabels.en }} ({{listing.localizedDescriptions.en }})<br>{% endfor %}
-                            {% else %}
-                            {% endcase %}
-                        {% endfor %}
-                    </td>
-                </tr>
-            {% endif %} 
+    <tr>
+        <td class="td-inset-{{ include.depth }}">
+            <b>{%if kid.localizedName %}{{ kid.localizedName }}{% else %} {{ kid.name }}{% endif %}</b><br>
+            {{ kid.rmType }}<br>
+            <i>{{ kid.min }}...{{ kid.max }}</i><br>
+            {% for term in kid.termBindings %}{% for val in term %}{{ val.value }}{% endfor %}{% if term.last %}{% else %}<br>{% endif %}{% endfor %}
+        </td>
+        <td>{{ kid.localizedDescriptions.nl }}</td>
+        <td>{%for input in kid.inputs %}
+                {% case input.suffix %}
+                {% when 'unit' %}<strong>input range</strong><br/>{% for listing in input.list %}{{ listing.validation.range.min }} {{ listing.validation.range.maxOp}} {{ listing.validation.range.max }} {{ listing.localizedLabels.nl }}<br/>{% endfor %}
+                {% when 'code' %}<strong>code :: label(description)</strong><br/>{% for listing in input.list %}{{ listing.value }} :: {{ listing.localizedLabels.nl }} ({{listing.localizedDescriptions.nl }})<br/>{% endfor %}
+                {% else %}
+                {% endcase %}
+            {% endfor %}
+        </td>
+    </tr>

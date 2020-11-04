@@ -5,7 +5,7 @@ color_scheme: oe
 search_enabled: true
 search_tokenizer_separator: /[\s/]+/
 logo: "/assets/images/openEHR_nl_logo.png"
-data_dir: ZIBs-on-openEHR/mappings
+data_dir: ZIBs-on-openEHR/data
 aux_links:
   "een project van openEHR Nederland":
     - "https://www.openehr.nl"

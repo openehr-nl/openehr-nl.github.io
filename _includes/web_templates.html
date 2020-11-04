@@ -1,0 +1,29 @@
+{% for template in page.openEHR.templates %}
+{% assign template_jid = template | remove: "." | remove: "(" |  remove: ")" |  replace: " ", "_" %}
+{% assign web_template = site.data.web_templates[template_jid] %}
+{% if web_template %}
+{% assign t = web_template.tree %}
+{% if t %}
+<h2>Web template: {{ template }}</h2>
+<table>
+    <thead>
+    <th width="20%">Node</th>
+    <th width="35%">Beschrijving</th>
+    <th width="45%">Invoer</th>
+    </thead>
+    <tbody>
+    {% for child in t.children %}
+    {% include template_table_row.html child=child depth="0" %}
+    {% for subchild in child.children %}
+    {% include template_table_row.html child=subchild depth="1" %}
+    {% for subsubchild in subchild.children %}
+    {% include template_table_row.html child=subsubchild depth="2" %}
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
+    </tbody>
+</table>
+Deze web template is beschikbaar als <a href="{{ layout.web_template_prefix }}/{{ template }}.{{ layout.web_template_suffix }}">{{ template }}.{{ layout.web_template_suffix }}</a> bestand.
+{% endif %}
+{% endif %}
+{% endfor %}

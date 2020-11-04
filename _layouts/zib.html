@@ -5,13 +5,15 @@ template_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/local
 template_suffix: t.json
 archetype_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/archetypes
 archetype_suffix: adl
+web_template_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master/data/web_templates
+web_template_suffix: json
 ---
 
 <h1>{{ page.title }}</h1>
 
 <dl>
-    <dt>Versie</dt>
-        <dd>{{ page.version }}</dd>
+    <dt>ZIB</dt>
+        <dd><a href="{{ page.zib.url }}">{{ page.zib.name }}</a></dd>
     <dt>Status</dt>
         <dd>{% for status in page.status %}{% assign topic=status[0] %}{% assign status_text=status[1] %}
             <span>{{ topic }}:{% include status.html status=status_text %} &nbsp; </span>
@@ -22,10 +24,14 @@ archetype_suffix: adl
         <dd>{% if page.categories %}{{ page.categories | array_to_sentence_string }}{% endif %}</dd>
     <dt>Auteur(s)</dt>
         <dd>{% if page.authors %}{{ page.authors | sort | array_to_sentence_string }}{% endif %}</dd>
+    <dt>Versie</dt>
+        <dd>{{ page.version }}</dd>
     <dt>Laatste wijziging</dt>
         <dd>{{ page.date | date: "%d-%m-%Y" }}</dd>
 </dl>
 
 {% include mapping.html %}
+
+{% include web_templates.html %}
 
 {{ content }}
