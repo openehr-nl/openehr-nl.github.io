@@ -5,6 +5,8 @@ layout: default
 ---
 
 # Werkwijze
+## To run the site and mapping locally
+For instructions to build and run locally: https://github.com/openehr-nl/openehr-nl.github.io/blob/master/_build.md
 
 ## Process and Methodology 
 ### for modelling ZIBs on openEHR
