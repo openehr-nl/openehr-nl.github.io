@@ -7,7 +7,7 @@ Than run this in order to bring up your jekyll environment to live:
 Now you that you have a bash prompt, you can update if necessary
 `gem update && bundle update`
 
-than make sure you have this lines in your local `_config.yml` (without committing them):
+than make sure you have these lines in your local `_config.yml` (without committing them):
 `verbose: true
 hostname: openehr-nl.local
 port: 4000`
