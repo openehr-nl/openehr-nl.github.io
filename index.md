@@ -13,7 +13,7 @@ Hiertoe is een werkgroep opgericht om gezamelijk deze ZIB's één voor één te 
 vertalen en om een referentie implementatie in een openEHR archetype en template te maken.
 
 Momenteel wordt gestart met het creëren van de eerste templates binnen de [Basisgegevensset Zorg (BgZ)](https://www.nictiz.nl/standaardisatie/informatiestandaarden/basisgegevensset-zorg-bgz). 
-We gebruiken de huidige [publicatie 2020(NL)](https://zibs.nl/wiki/ZIB_Publicatie_2020(NL)). 
+We gebruiken de huidige ZIB [publicatie 2020(NL)](https://zibs.nl/wiki/ZIB_Publicatie_2020(NL)). 
 
 Meer relevante informatie en referenties zijn te vinden op de [links](/links.html) pagina.
 
@@ -33,4 +33,3 @@ Lees de [werkwijze](/help.html) en ga aan de slag!
 + 13 November 2020		Online werkgroep meeting
 + 4 December 2020		Online werkgroep meeting
 + 18 December 2020		Online werkgroep meeting
-
