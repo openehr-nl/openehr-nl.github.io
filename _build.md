@@ -16,4 +16,4 @@ than you can start up the build, the webservice and the listener:
 `jekyll serve --host openehr-nl.local`
 
 Now you can change files, content and just see the results by browsing at:
-`http://openehr-nl.local:4000/`
+`http:/localhost:4000/`
