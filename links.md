@@ -6,24 +6,21 @@ nav_order: 6
 
 # Links and tools for modelling ZIBs on openEHR
 
-## ZIBs & BgZ Links
-
-Werkgroep repository:
+ZIBs-on-openEHR Werkgroep repository:
 [https://github.com/openehr-nl/ZIBs-on-openEHR](https://github.com/openehr-nl/ZIBs-on-openEHR)
 
-ZIBs on openEHR Website repository:
-[https://openehr-nl.github.io](https://openehr-nl.github.io)
+## ZIBs & BgZ Links
 
-ZIBs 2019:
-[https://zibs.nl/wiki/ZIB_Publicatie_2019(NL)](https://zibs.nl/wiki/ZIB_Publicatie_2019(NL))
+ZIBs Publicatie 2020:
+[https://zibs.nl/wiki/ZIB_Publicatie_2020(NL)](https://zibs.nl/wiki/ZIB_Publicatie_2020(NL))
 
-ZIBs en MedMij:
-[https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2019.01_Ontwerpen](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2019.01_Ontwerpen)
+Nictiz: Ontwerpen MedMij
+[https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen)
 
-MedMij BgZ in FHIR:
-[https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2019.01_FHIR_BGZ_2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2019.01_FHIR_BGZ_2017)
+Nictiz: MedMij FHIR Implementation Guide: BgZ:
+[https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/FHIR_BGZ_2017)
 
-Nictiz over ZIBs:
+Nictiz: Gebruik van zibs in informatiestandaarden:
 [https://informatiestandaarden.nictiz.nl/wiki/Zib:Zib_Gebruik_Informatiestandaarden](https://informatiestandaarden.nictiz.nl/wiki/Zib:Zib_Gebruik_Informatiestandaarden)
 
 Registratie aan de Bron
@@ -35,8 +32,14 @@ Nictiz Basisgegevenset zorg (BgZ)
 Nictiz Basisgegevenset zorg (BgZ)
 [https://www.nictiz.nl/standaarden/basisgegevensset-zorg](https://www.nictiz.nl/standaarden/basisgegevensset-zorg)
 
-BgZ on Simplifier (FHIR):
-[https://simplifier.net/nictizstu3-zib2017/bgz2017-servercapabilities](https://simplifier.net/nictizstu3-zib2017/bgz2017-servercapabilities)
+PGO-BgZ-Server CapabilityStatement on Simplifier (FHIR):
+[https://simplifier.net/pgo/bgz2017-servercapabilities](https://simplifier.net/pgo/bgz2017-servercapabilities)
+
+ART-DECOR: Projectindex Basisgegevensset Zorg 2017 (BgZ)
+[https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=bgz2017-&format=html&language=nl-NL&version=2019-03-13T15%3A29%3A10](https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=bgz2017-&format=html&language=nl-NL&version=2019-03-13T15%3A29%3A10)
+
+ART-DECOR: Projectindex Zorginformatiebouwstenen (ZIB) 2020:
+[https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=zib2020bbr-&format=html&language=nl-NL&version=](https://decor.nictiz.nl/decor/services/ProjectIndex?prefix=zib2020bbr-&format=html&language=nl-NL&version=)
 
 
 ## openEHR Links
