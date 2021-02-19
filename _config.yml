@@ -15,9 +15,11 @@ exclude: [
   "Gemfile.lock",
   ".idea",
   "Dockerfile",
+  "docker-compose",
+  "LICENSE",
   "_build.md",
   "README.md",
   "ZIBs-on-openEHR/README.md",
-  "ZIBs-on-openEHR/local"
+  "ZIBs-on-openEHR/scripts"
 ]
 verbose: false
