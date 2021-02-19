@@ -8,7 +8,7 @@ github_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master
 
 <dl>
     <dt>ZIB</dt>
-        <dd><a href="{{ page.zib.url }}">{{ page.zib.name }}</a></dd>
+        <dd><a href="https://zibs.nl/wiki/{{ page.zib }}(2020NL)">{{ page.zib }}</a></dd>
     <dt>Status</dt>
         <dd>{% for status in page.status %}{% assign topic=status[0] %}{% assign status_text=status[1] %}
             <span>{{ topic }}:{% include status.html status=status_text %} &nbsp; </span>
