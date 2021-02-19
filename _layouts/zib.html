@@ -14,11 +14,11 @@ github_prefix: https://github.com/openehr-nl/ZIBs-on-openEHR/blob/master
             <span>{{ topic }}:{% include status.html status=status_text %} &nbsp; </span>
         {% endfor %}</dd>
     <dt>Labels</dt>
-        <dd>{% if page.tags %}{{ page.tags | sort | array_to_sentence_string }}{% endif %}</dd>
+        <dd>{% if page.tags %}{{ page.tags | sort | array_to_sentence_string: "en" }}{% endif %}</dd>
     <dt>Informatiestandaard</dt>
-        <dd>{% if page.categories %}{{ page.categories | array_to_sentence_string }}{% endif %}</dd>
-    <dt>Auteur(s)</dt>
-        <dd>{% if page.authors %}{{ page.authors | sort | array_to_sentence_string }}{% endif %}</dd>
+        <dd>{% if page.categories %}{{ page.categories | array_to_sentence_string: "en" }}{% endif %}</dd>
+    <dt>Auteurs</dt>
+        <dd>{% if page.authors %}{{ page.authors | sort | array_to_sentence_string: "en" }}{% endif %}</dd>
     <dt>Versie</dt>
         <dd>{{ page.version }}</dd>
     <dt>Laatste wijziging</dt>
