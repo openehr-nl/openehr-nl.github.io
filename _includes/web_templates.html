@@ -13,17 +13,17 @@
     </thead>
     <tbody>
     {% for child in t.children %}
-    {% include template_table_row.html child=child depth="0" %}
-    {% for subchild in child.children %}
-    {% include template_table_row.html child=subchild depth="1" %}
-    {% for subsubchild in subchild.children %}
-    {% include template_table_row.html child=subsubchild depth="2" %}
-    {% endfor %}
-    {% endfor %}
+        {% include template_table_row.html child=child depth="0" %}
+        {% for subchild in child.children %}
+            {% include template_table_row.html child=subchild depth="1" %}
+            {% for subsubchild in subchild.children %}
+                {% include template_table_row.html child=subsubchild depth="2" %}
+            {% endfor %}
+        {% endfor %}
     {% endfor %}
     </tbody>
 </table>
-Deze web template is beschikbaar als <a href="{{ layout.web_template_prefix }}/{{ template }}.{{ layout.web_template_suffix }}">{{ template }}.{{ layout.web_template_suffix }}</a> bestand.
+Deze web template is beschikbaar als <a href="{{ layout.github_prefix }}/data/web_templates/{{ template }}.json">{{ template }}.json</a> bestand.
 {% endif %}
 {% endif %}
 {% endfor %}
