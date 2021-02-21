@@ -1,3 +1,4 @@
+<a name="#mapping"></a>
 <h2>Mapping</h2>
 
 <dl>
@@ -28,6 +29,8 @@
         {% endfor %}</dd>
 </dl>
 
+{% assign mappingsPages = site.html_pages | where: 'parent', 'Mappings' %}
+{% assign valueSets = "" %}
 {% assign concept = page.name | replace: '.md', '' %}
 {% assign mapping = site.data.mappings[concept] %}
 {% if mapping %}
@@ -41,7 +44,33 @@
     {% for row in mapping %}
     <tr>
         {% for cell in row %}
-        <td>{{ cell[1] }}</td>
+            {% if cell[0] == 'ZIB_Verwijzing' %}
+                {% if cell[1] contains 'Dit is een verwijzing' %}
+                    {% assign refZibName = cell[1] | remove: "." | split: " " | last %}
+                    {% assign refZib = mappingsPages | where: "title", refZibName | first %}
+                    {% if refZib %}
+                        <td>ZIB <a href="{{ refZib.url }}"/>{{ refZib.title }}</a></td>
+                    {% else %}
+                        <td>ZIB <em/>{{ refZibName }}</em></td>
+                    {% endif %}
+                {% elsif cell[1] %}
+                    {% assign potentialValueSets = cell[1] | split: "; " %}
+                    <td>{% for valueSet in potentialValueSets %}
+                            {% assign valueSetId = valueSet | downcase %}
+                            {% if site.data.valuesets[valueSetId] %}
+                                {% assign valueSets = valueSets | append: valueSet | append: "," %}
+                                <a href="#{{ valueSet }}"/>{{ valueSet }}</a>{% unless forloop.last %}; {% endunless %}
+                            {% else %}
+                                <em>{{ valueSet }}</em>{% unless forloop.last %}; {% endunless %}
+                            {% endif %}
+
+                        {% endfor %}</td>
+                {% else %}
+                    <td/>
+                {% endif %}
+            {% else %}
+                <td>{{ cell[1] }}</td>
+            {% endif %}
         {% endfor %}
     </tr>
     {% endfor %}
@@ -49,3 +78,32 @@
 </table>
 Deze <strong>mapping</strong> is beschikbaar als <a href="{{ layout.github_prefix }}/data/mappings/{{ concept }}.csv">{{ concept }}.csv</a> bestand.
 {% endif %}
+
+{% if valueSets %}
+<h2>Valuesets</h2>
+{% assign valueSets = valueSets | split: ',' %}
+{% for valueSetName in valueSets %}
+<a name="{{ valueSetName }}"></a>
+<h3>{{ valueSetName }}</h3>
+{% assign valueSetId = valueSetName | downcase %}
+{% assign valueSet = site.data.valuesets[valueSetId] %}
+<table>
+    <thead>
+    {% for column in valueSet[0] %}
+    <th>{{ column[0] }}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for row in valueSet %}
+    <tr>
+        {% for cell in row %}
+            <td>{{ cell[1] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+Deze <strong>ValueSet</strong> is beschikbaar als <a href="{{ layout.github_prefix }}/data/valuesets/{{ valueSetId }}.csv">{{ valueSetId }}.csv</a> bestand.
+{% endfor %}
+{% endif %}
+
