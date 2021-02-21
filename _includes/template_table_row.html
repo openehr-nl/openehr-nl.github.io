@@ -1,18 +1,18 @@
     {% assign  kid = include.child %}
     <tr title="AQL path: {{kid.aqlPath}}">
         <td class="td-inset-{{ include.depth }}">
-            <b>{%if kid.localizedName %}{{ kid.localizedName }}{% else %} {{ kid.name }}{% endif %}</b><br>
-            {{ kid.rmType }}<br>
+            <b>{% if kid.localizedName %}{{ kid.localizedName }}{% else %}{{ kid.name }}{% endif %}</b><br>
+            <a href="https://specifications.openEHR.org/classes/{{ kid.rmType }}" target="_blank">{{ kid.rmType }}</a><br>
             <i>{{ kid.min }}..{{ kid.max }}</i><br>
             {% for term in kid.termBindings %}{% for val in term %}{{ val.value }}{% endfor %}{% if term.last %}{% else %}<br>{% endif %}{% endfor %}
         </td>
-        <td>{{ kid.localizedDescriptions.nl }}</td>
-        <td>{%for input in kid.inputs %}
-                {% case input.suffix %}
-                {% when 'unit' %}<strong>input range</strong><br/>{% for listing in input.list %}{{ listing.validation.range.min }} {{ listing.validation.range.maxOp}} {{ listing.validation.range.max }} {{ listing.localizedLabels.nl }}<br/>{% endfor %}
-                {% when 'code' %}<strong>code :: label(description)</strong><br/>{% for listing in input.list %}{{ listing.value }} :: {{ listing.localizedLabels.nl }} ({{listing.localizedDescriptions.nl }})<br/>{% endfor %}
-                {% else %}
-                {% endcase %}
+        <td>{{ kid.localizedDescriptions.nl | default: kid.localizedDescriptions.en }}</td>
+        <td>{% if kid.annotations.comment %}<p><em>{{ kid.annotations.comment }}</em></p>{% endif %}
+            {% for input in kid.inputs %}
+                {% if input.suffix == 'unit' %}<strong>input range</strong><br/>{% for listing in input.list %}{{ listing.validation.range.min }} {{ listing.validation.range.maxOp}} {{ listing.validation.range.max }} {{ listing.localizedLabels.nl }}<br/>{% endfor %}
+                {% elsif input.suffix == 'code' %}<strong>code :: label(description)</strong><br/>{% for listing in input.list %}{{ listing.value }} :: {{ listing.localizedLabels.nl }} ({{listing.localizedDescriptions.nl }})<br/>{% endfor %}
+                {% else %}<strong>{% if input.suffix %}{{ input.suffix }}: {% endif %}{{ input.type }}</strong> field<br/>
+                {% endif %}
             {% endfor %}
         </td>
     </tr>
