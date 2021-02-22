@@ -1,13 +1,26 @@
 ---
+permalink: /assets/js/search-data.json
 ---
 [
-  {% assign items = site.pages | where: 'parent', 'Mappings' %}
-  {% for page in items %}
+{% assign items = site.html_pages | where: 'parent', 'Mappings' %}
+{% for page in site.html_pages %}
+    {% if page.parent == 'Mappings' %}
+      {% capture header %}{{ page.zib }} ({{ page.date | date: '%d-%m-%Y' }} status:{{ page.status.globaal }}) .{% endcapture %}
+      {% assign labels = page.tags | concat: page.categories | join: ', ' %}{% if labels %}{% capture labels %}Labels: {{ labels }} .{% endcapture %}{% endif %}
+      {% assign authors = page.authors | join: ', ' %}{% if labels %}{% capture authors %}Authors: {{ authors }} .{% endcapture %}{% endif %}
     {
-      "title": "{{ page.title | escape }}",
-      "content": "{{ page.zib.name }} ({{ page.date | date: '%d-%m-%Y' }} <b>{{ page.status.mapping }}</b>) <br/><i>Labels:{{ page.tags | join: ', ' }}</i> <br/>{{ page.content | markdownify | strip_html | normalize_whitespace }}",
-      "url": "{{ page.url | absolute_url }}",
-      "relUrl": "{{ page.url }}"
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
+    "doc": "{{ page.title | escape }}",
+    "title": "{{ page.title | escape }}",
+    "content": "{{ header }} {{ labels }} {{ authors }} {{ page.content | strip_html | normalize_whitespace }}",
+    "url": "{{ page.url | absolute_url }}",
+    "relUrl": "{{ page.url }}"
+    }{% elsif page.search_exclude != true %}
+    {
+    "doc": "{{ page.title | escape }}",
+    "title": "{{ page.title | escape }}",
+    "content": "{{ page.content | strip_html | normalize_whitespace | escape }}",
+    "url": "{{ page.url | absolute_url }}",
+    "relUrl": "{{ page.url }}"
+    }{% endif %}{% unless forloop.last %},{% endunless %}
+{% endfor %}
 ]
