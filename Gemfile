@@ -6,6 +6,6 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem "jekyll"
+gem "github-pages"
 gem "just-the-docs"
-# gem "jekyll-remote-theme"
+gem "jekyll-remote-theme"
