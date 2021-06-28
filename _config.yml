@@ -15,7 +15,7 @@ exclude: [
   "Gemfile.lock",
   ".idea",
   "Dockerfile",
-  "docker-compose",
+  "docker-compose.yml",
   "LICENSE",
   "_build.md",
   "README.md",

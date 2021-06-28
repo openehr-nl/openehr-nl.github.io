@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  openehr-nl-zibs:
+    container_name: "openehr-nl-zibs"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    hostname: "openehr-nl.local"
+    volumes:
+      - .:/srv/jekyll
