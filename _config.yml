@@ -23,8 +23,10 @@ exclude: [
   "ZIBs-on-openEHR/README.md",
   "ZIBs-on-openEHR/scripts"
 ]
-verbose: true
-hostname: openehr-nl.local
-port: 4000
-theme: "just-the-docs"
-
+###############################
+# For local use only
+###############################
+#verbose: true
+#hostname: openehr-nl.local
+#port: 4000
+#theme: "just-the-docs"
