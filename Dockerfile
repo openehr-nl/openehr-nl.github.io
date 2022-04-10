@@ -1,4 +1,4 @@
-FROM jekyll/jekyll
+FROM jekyll/jekyll:3.8
 # see https://github.com/envygeeks/jekyll-docker/blob/master/README.md for using latest jekyll as docker
 # this provides also bundler, but it needs to be updated
 RUN gem update bundler
