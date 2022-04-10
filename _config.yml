@@ -1,4 +1,4 @@
-title: "just-the-docs"
+title: "openEHR Nederland"
 remote_theme: just-the-docs/just-the-docs
 color_scheme: oe
 search_enabled: true
@@ -23,4 +23,8 @@ exclude: [
   "ZIBs-on-openEHR/README.md",
   "ZIBs-on-openEHR/scripts"
 ]
-verbose: false
+verbose: true
+hostname: openehr-nl.local
+port: 4000
+theme: "just-the-docs"
+
