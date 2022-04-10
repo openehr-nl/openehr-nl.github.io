@@ -1,6 +1,5 @@
 title: "just-the-docs"
 remote_theme: just-the-docs/just-the-docs
-theme: "just-the-docs"
 color_scheme: oe
 search_enabled: true
 search:

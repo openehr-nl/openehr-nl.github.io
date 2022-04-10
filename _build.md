@@ -1,4 +1,4 @@
-# Information for building
+# Information for building locally
 
 This website is using `jekyll` and `liquid` in order to build HTML pages from markdown files.
 The same technology stack is also used by [github-pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll). 
@@ -25,9 +25,17 @@ Once the service is started, you can change files, content and just see the resu
 `http://openehr-nl.local:4000/`
 
 
+## Configuring the theme
+
+First make sure you have these lines in your local `_config.yml` (but without committing them):
+```yml
+theme: just-the-docs
+```
+
+
 ## Building the website
 
-There are two methods of building the website described in the followings. 
+There are two methods of building the website, described in the followings. 
 Both methods assume that the website will be available at http://openehr-nl.local:4000/.
 
 ### Build using `docker`
@@ -62,14 +70,14 @@ You can get access to a bash shell inside container by running on the host:
 docker-compose exec openehr-nl-zibs bash
 ```
 
-## Extra 
+## Other commands 
 
 If you need to update the tools to the latest published version, you can do that by a running in the container bash prompt:
 ```shell
 bundle update
 ```
 
-Than you can manually start up the build, the webservice and the listener:
+Then you can manually start up the build, the webservice and the listener:
 ```shell
 jekyll serve --host openehr-nl.local
 ```
