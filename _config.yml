@@ -1,4 +1,4 @@
-title: "Remote theme example"
+title: "just-the-docs"
 remote_theme: just-the-docs/just-the-docs
 theme: "just-the-docs"
 color_scheme: oe
@@ -7,10 +7,11 @@ search:
   tokenizer_separator: /[\s/]+/
 logo: "/assets/images/openEHR_nl_logo.png"
 data_dir: ZIBs-on-openEHR/data
-aux_links:
-  "een project van openEHR Nederland":
-    - "https://www.openehr.nl"
+#aux_links:
+#  "een project van openEHR Nederland":
+#    - "https://www.openehr.nl"
 heading_anchors: false
+footer_content: "Copyright &copy; 2020-2022 openEHR Nederland. This work is licensed under the <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>."
 exclude: [
   "Gemfile",
   "Gemfile.lock",
