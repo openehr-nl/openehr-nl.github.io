@@ -1,9 +1,10 @@
 title: "Remote theme example"
-remote_theme: pmarsceill/just-the-docs
+remote_theme: just-the-docs/just-the-docs
 theme: "just-the-docs"
 color_scheme: oe
 search_enabled: true
-search_tokenizer_separator: /[\s/]+/
+search:
+  tokenizer_separator: /[\s/]+/
 logo: "/assets/images/openEHR_nl_logo.png"
 data_dir: ZIBs-on-openEHR/data
 aux_links:
