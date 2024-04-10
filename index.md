@@ -22,14 +22,3 @@ Meer relevante informatie en referenties zijn te vinden op de [links](/links.htm
 
 Geef je op via info@openehr.nl voor de werkgroep en je ontvangt dan de nieuwsbrief en uitnodigingen voor bijeenkomsten. 
 Lees de [werkwijze](/help.html) en ga aan de slag!
-
-*Agenda:*
-
-+ 3 Juli 2020 			Online werkgroep meeting ([meeting verslag](/werkgroep/20200703_meeting.html))
-+ 21 August 2020 		Online werkgroep meeting 
-+ 18 September 2020 	Online werkgroep meeting 
-+ 16 Oktober 2020		Online werkgroep meeting
-+ 4 November 2020		Online werkgroep meeting
-+ 13 November 2020		Online werkgroep meeting
-+ 4 December 2020		Online werkgroep meeting
-+ 18 December 2020		Online werkgroep meeting
